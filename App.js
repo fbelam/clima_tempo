@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 import MainCard from './components/MainCard';
+import InfoCards from './components/InfoCards';
 import { Fontisto } from '@expo/vector-icons';
 
 export default function App() {
@@ -33,6 +34,19 @@ const styles = StyleSheet.create({
     margin: 10,
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  info:{
+    alignItems: 'center',
+    backgroundColor: darkTheme ? '#393e54' : '#8f8f8f',
+    borderRadius: 20,
+    width: 350,
+    height: 230
+  },
+  infoText: {
+    color: darkTheme ? '#e0e0e0' : 'white',
+    margin: 15,
+    fontSize: 20,
+    fontWeight: 'bold'
   }
 
 });
@@ -57,7 +71,19 @@ const styles = StyleSheet.create({
       <MainCard title={'Tarde'} backgroundColor={darkTheme ? '#D29600' : '#FCC63F'} temperature={'29'} icon={'afternoon'}></MainCard>
       <MainCard title={'Noite'} backgroundColor={darkTheme ? '#008081' : '#38B7BB'} temperature={'29'} icon={'night'}></MainCard>
       </View>
+
+      <View style={styles.info}>
+        <Text style={styles.infoText}>Informaçoes adicionais</Text>
+        <View style={styles.InfoCards}>
+        <infoCard title={'Wind'} value={'65 km/h'}></infoCard>
+        <infoCard title={'Wind'} value={'65 km/h'}></infoCard>
+        <infoCard title={'Wind'} value={'65 km/h'}></infoCard>
+        <infoCard title={'Wind'} value={'65 km/h'}></infoCard>
+
+        </View>
+      </View>
     </View>
+
   );
 }
 

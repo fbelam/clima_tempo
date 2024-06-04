@@ -2,23 +2,24 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useState, useEffect } from 'react';
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
 
 const MainCard = (props) => {
 
     const Icon = () => {
         if(props.icon === 'morning'){
             return(
-                <Feather name="sun" style={styles.cardIcon} size={40} color="orange" />
+                <Feather name="sun" style={styles.cardIcon} size={40} color="white" />
             )
         }
         if(props.icon === 'afternoon'){
             return(
-                <Fontisto name="day-cloudy" size={40} color="white" />
+                <Fontisto name="day-cloudy" style={styles.cardIcon}  size={40} color="white" />
             )
         }
         if(props.icon === 'night'){
             return(
-                <Feather name="sun" style={styles.cardIcon} size={40} color="orange" />
+                <Feather name="cloud-rain" style={styles.cardIcon} size={40} color="white" />
             )
         }
     }
